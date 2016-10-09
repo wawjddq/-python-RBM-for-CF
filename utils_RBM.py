@@ -9,6 +9,7 @@ Created on Thu May 12 21:53:16 2016
 import numpy as np
 import os
 
+#计算sigmoid函数，作用是将参数限制在（0，1）范围内
 def sigmoid(x):
     return 1.0 / (1 + np.exp(-x))
 
@@ -37,7 +38,7 @@ def load_data(path):
     m, n = dataset.shape
     return m,n,dataset
 
-
+#拆分数据集
 def splitData(dataSet):
     m, n = dataSet.shape     #获得数据集的行，列
     train_num = int(round(m * 0.8))     #训练集个数占总数据集的80%
